@@ -1,16 +1,35 @@
-ul {
+/* ul {
+    width: 500px;
+    height: 500px;
     background-color: mediumaquamarine;
     list-style: none;
     display: flex;
-    flex-wrap: wrap
+    flex-wrap: wrap;
+    align-items: center;
 }
 ul li {
+    width: 100px;
+    height: 100px;
     background-color: blueviolet;
     border: 1px solid black;
     list-style: none;
-    flex: 1 1 160px;
-    /* display: inline; */
-    /* flex-wrap: wrap; */
+
+} */
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 300px;
+}
+
+ul li {
+    list-style: none;
+    width: 30%;
+    height: 90px;
+    border: 1px solid black;
+    background-color: gray;
 }
 
 figure {
