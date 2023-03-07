@@ -15,7 +15,7 @@
   \**********************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("const View = __webpack_require__(/*! ./ttt-view.js */ \"./src/ttt-view.js\")\nconst Game = __webpack_require__(/*! ../ttt_node/game.js */ \"./ttt_node/game.js\")\n\ndocument.addEventListener(\"DOMContentLoaded\", () => {\n  // Your code here\n});\n\n\n//# sourceURL=webpack://tic-tac-toe/./src/index.js?");
+eval("const View = __webpack_require__(/*! ./ttt-view.js */ \"./src/ttt-view.js\")\nconst Game = __webpack_require__(/*! ../ttt_node/game.js */ \"./ttt_node/game.js\")\n\ndocument.addEventListener(\"DOMContentLoaded\", () => {\n  const game = new Game();\n  window.game = game;\n\n  const figure = document.getElementsByClassName(\"ttt\")[0];\n  window.figure = figure;\n\n  const view = new View(game, figure)\n  window.view = view;\n\n  view.setupBoard();\n\n});\n\n\n//# sourceURL=webpack://tic-tac-toe/./src/index.js?");
 
 /***/ }),
 
@@ -25,7 +25,7 @@ eval("const View = __webpack_require__(/*! ./ttt-view.js */ \"./src/ttt-view.js\
   \*************************/
 /***/ ((module) => {
 
-eval("class View {\n  constructor(game, el) {}\n\n  setupBoard() {}\n  \n  bindEvents() {}\n\n  handleClick(e) {}\n\n  makeMove(square) {}\n\n}\n\nmodule.exports = View;\n\n\n//# sourceURL=webpack://tic-tac-toe/./src/ttt-view.js?");
+eval("class View {\n  constructor(game, figure) {\n    this.game = game;\n    this.figure = figure;\n\n    // also another way to automatically run setupBoard when refreshed\n    // this.setupBoard();\n  }\n\n  setupBoard() {\n    // appendChild takes in a creation of an HTML element\n    const ul = this.figure.appendChild(document.createElement(\"ul\"))\n    \n    for (let i = 0; i < 9; i++) {\n      const li = document.createElement(\"li\")\n      ul.appendChild(li)\n    }\n\n  }\n  \n  bindEvents() {}\n\n  handleClick(e) {}\n\n  makeMove(square) {}\n\n}\n\nmodule.exports = View;\n\n\n//# sourceURL=webpack://tic-tac-toe/./src/ttt-view.js?");
 
 /***/ }),
 
