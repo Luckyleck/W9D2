@@ -4,7 +4,7 @@ class View {
     this.figure = figure;
 
     // also another way to automatically run setupBoard when refreshed
-    // this.setupBoard();
+    this.setupBoard();
   }
 
   setupBoard() {
@@ -13,7 +13,8 @@ class View {
     
     for (let i = 0; i < 9; i++) {
       const li = document.createElement("li")
-      ul.appendChild(li)
+      ul.appendChild(li);
+
     }
 
   }

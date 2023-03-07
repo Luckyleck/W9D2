@@ -11,6 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const view = new View(game, figure)
   window.view = view;
 
-  view.setupBoard();
+  // view.setupBoard();
 
 });

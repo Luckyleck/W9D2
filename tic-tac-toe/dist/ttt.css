@@ -1,0 +1,19 @@
+ul {
+    background-color: mediumaquamarine;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap
+}
+ul li {
+    background-color: blueviolet;
+    border: 1px solid black;
+    list-style: none;
+    flex: 1 1 160px;
+    /* display: inline; */
+    /* flex-wrap: wrap; */
+}
+
+figure {
+    width: 500px;
+    height: 500px;
+}
