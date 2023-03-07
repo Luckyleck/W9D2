@@ -32,6 +32,11 @@ ul li {
     background-color: gray;
 }
 
+ul li:hover {
+    background-color: yellow;
+    opacity: 0.2;
+}
+
 figure {
     width: 500px;
     height: 500px;
